@@ -1,0 +1,67 @@
+<modification>
+	<name>Excel 导入导出工具</name>
+	<code>excel_import_export</code>
+	<version>1.0</version>
+	<link>https://hughshen.github.io</link>
+	<author>hughshen</author>
+	
+	<file path="admin/language/english/common/menu.php">
+		<operation>
+			<search><![CDATA[$_['text_error_log']]]></search>
+			<add position="after"><![CDATA[
+				$_['text_excel_import_export']           = 'Excel Import Export Tool';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file path="admin/language/zh-CN/common/menu.php">
+		<operation>
+			<search><![CDATA[$_['text_error_log']]]></search>
+			<add position="after"><![CDATA[
+				$_['text_excel_import_export']           = 'Excel导出工具';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file path="admin/language/zh-HK/common/menu.php">
+		<operation>
+			<search><![CDATA[$_['text_error_log']]]></search>
+			<add position="after"><![CDATA[
+				$_['text_excel_import_export']           = 'Excel導入導出工具';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file path="admin/controller/common/menu.php">
+	
+		<operation>
+			<search><![CDATA[
+				$data['text_error_log'] = $this->language->get('text_error_log');
+			]]></search>
+			<add position="after"><![CDATA[
+				$data['text_excel_import_export'] = $this->language->get('text_excel_import_export');
+			]]></add>
+		</operation>
+		
+		<operation>
+			<search><![CDATA[
+				$data['error_log'] = $this->url->link('tool/error_log', 'token=' . $this->session->data['token'], 'SSL');
+			]]></search>
+			<add position="after"><![CDATA[
+				$data['excel_import_export'] = $this->url->link('tool/excelimportexport', 'token=' . $this->session->data['token'], 'SSL');
+			]]></add>
+		</operation>
+		
+	</file>
+	<file path="admin/view/template/common/menu.tpl">
+		<operation>
+			<search><![CDATA[
+      			<li><a href="<?php echo $error_log; ?>"><?php echo $text_error_log; ?></a></li>
+			]]></search>
+			<add position="after"><![CDATA[
+				<li><a href="<?php echo $excel_import_export; ?>"><?php echo $text_excel_import_export; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+	
+</modification>
