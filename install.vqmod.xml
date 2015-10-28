@@ -1,9 +1,7 @@
 <modification>
 	<name>Excel 导入导出工具</name>
-	<code>excel_import_export</code>
+	<code>opencart_excel_import_export</code>
 	<version>1.0</version>
-	<link>https://hughshen.github.io</link>
-	<author>hughshen</author>
 	
 	<file path="admin/language/english/common/menu.php">
 		<operation>
